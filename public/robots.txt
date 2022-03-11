@@ -1,0 +1,11 @@
+# *
+User-agent: *
+Allow: /
+Allow: /404
+Disallow: /__tests__
+
+# Host
+Host: https://portfolio-nyctibiusvii.vercel.app
+
+# Sitemaps
+Sitemap: https://portfolio-nyctibiusvii.vercel.app/sitemap.xml
