@@ -1,5 +1,5 @@
 module.exports = {
-    siteUrl:           'https://portfolio-nyctibiusvii.vercel.app',
+    siteUrl:           'https://nyctibiusvii.vercel.app',
     changefreq:        'daily',
     priority:          0.7,
     sitemapSize:       5000,
