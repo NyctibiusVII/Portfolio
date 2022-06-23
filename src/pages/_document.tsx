@@ -71,7 +71,7 @@ export default class MyDocument extends Document {
                     <meta name='twitter:image:width'  content='1366'                   />
                     <meta name='twitter:image:height' content='768'                    />
 
-                    <link rel='shortcut icon' href='icon.---' type='image/---' />
+                    <link rel='shortcut icon' href='assets/favicon.svg' type='image/svg' />
 
                     <link rel='preconnect' href='https://fonts.googleapis.com' />
                     <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />
