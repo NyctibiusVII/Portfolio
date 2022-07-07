@@ -14,23 +14,32 @@
     --black : #000;
 
     --blue-200  : #8393AF;
+    --blue-800  : #10151e;
     --blue-900  : #0C121C;
     --blue-1000 : #030812;/* ~ 1° */
 
     --pink-100 : #FFC0CB;
     --pink-200 : #FF80B5;/* ~ 1° */
     --pink-300 : #FF75AF;
+    --pink-200-transparency-50 : #FF80B580;
+    --pink-200-transparency-80 : #FF80B5CC;
 
     --purple-200 : #7438f3;/* ~ 1° */
+    --purple-200-transparency-50 : #7438f380;
 
     /* ~~~~~~~~~~~~~~~~~ Geral ~~~~~~~~~~~~~~~~~ */
-    --gradient-button : linear-gradient(254.95deg, var(--pink-300) 0%, var(--purple-200) 100%);
-    --transition-cb   : 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-    --luminosity-50p  : rgb(255 255 255 / 50%);
-    --luminosity-10p  : rgb(255 255 255 / 10%);
-    --luminosity-5p   : rgb(255 255 255 / 5%);
-    --shadow-5p       : rgb(0 0 0 / 5%);
-    --shadow-1p       : rgb(0 0 0 / 1%);
+    --gradient-button   : linear-gradient(254.95deg, var(--pink-300) 0%, var(--purple-200) 100%);
+    --gradient-contact  : linear-gradient(72.87deg, var(--pink-200-transparency-50) 0%, var(--purple-200-transparency-50) 100%);
+    --gradient-logo     : linear-gradient(270deg, var(--pink-200-transparency-80) 15.44%, var(--purple-200-transparency-50) 141.14%);
+    --transition-cb     : 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    --luminosity-70p    : rgb(255 255 255 / 70%);
+    --luminosity-50p    : rgb(255 255 255 / 50%);
+    --luminosity-10p    : rgb(255 255 255 / 10%);
+    --luminosity-5p     : rgb(255 255 255 / 5%);
+    --shadow-5p         : rgb(0 0 0 / 5%);
+    --shadow-1p         : rgb(0 0 0 / 1%);
+    --max-width-mobile  : 39.2rem;
+    --max-width-desktop : 75rem;
 
     /* ~~~~~~~~~~~~~~~ JSON Code ~~~~~~~~~~~~~~~ */
     /* Colors ~ Dracula Theme */
@@ -62,8 +71,15 @@
     --button-bg-normal         : var(--blue-900);
     --button-bg-line           : transparent;
     --button-bg-gradient       : var(--gradient-button);
+    --button-bg-options        : var(--luminosity-5p);
     --button-bg-dev            : transparent;
     --button-bg-social         : var(--luminosity-5p);
+    /* Popover -------------- */
+    --popover-search-bg        : var(--blue-800);
+    --popover-search-text      : var(--white);
+    --popover-menu-bg          : var(--blue-800);
+    --popover-menu-text        : var(--luminosity-70p);
+    --popover-menu-divider     : var(--luminosity-10p);
     /* Mouse Selection ------ */
     --selection-mouse-bg       : var(--luminosity-10p);
     --selection-mouse-fg       : var(--pink-200);
@@ -86,6 +102,10 @@ html {
         background-color: var(--background);
         color: var(--text-plain);
 
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
         &,
         input,
         button,
@@ -106,6 +126,7 @@ html {
         h1 { font: 700 2.625rem 'Poppins', sans-serif; }
         ol,
         ul { padding-left: 0; margin-top: 0; margin-bottom: 0; }
+        li { list-style: none; }
     }
 
     ::selection {
@@ -117,6 +138,7 @@ html {
 button {
     max-width: 30rem;
 
+    background-color: transparent;
     color: var(--text-plain);
     border: 0.125rem solid transparent;
     outline: none;
@@ -165,6 +187,21 @@ button {
 
         &:hover { border: 0.125rem solid  var(--text-plain) }
         &:focus { border: 0.125rem dashed var(--text-plain) }
+    }
+
+    &.options {
+        width: 2.125rem;
+        height: 2.125rem;
+
+        padding: 0;
+
+        border-radius: 0.5rem;
+        -webkit-border-radius: 0.5rem;
+        -moz-border-radius: 0.5rem;
+        -ms-border-radius: 0.5rem;
+        -o-border-radius: 0.5rem;
+
+        &:hover { background-color: var(--button-bg-options); }
     }
 
     &.devLanguages {
