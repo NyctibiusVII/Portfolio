@@ -1,0 +1,182 @@
+/* Mobile */
+.container {
+    max-width: var(--max-width-mobile);
+    width: 100%;
+    height: 5rem;
+
+    padding: 0 2rem;
+
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 100;
+
+    .logo {
+        display: flex;
+        align-items: center;
+
+        > span:not(.username) { display: none !important; }
+
+        span.username {
+            background-image: var(--gradient-logo);
+            background-clip: text;
+            text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: var(--white);
+
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+    }
+
+    .options {
+        display: flex;
+        align-items: center;
+
+        /* SearchIcon */
+        > div > div div:last-child form button span { width: 0.75rem !important; height: 0.75rem !important; }
+    }
+
+    div.search,
+    nav.links { display: none; }
+}
+
+
+
+/* Tablet / Desktop */
+@media (min-width: 780px) {
+    .container {
+        max-width: 60rem;
+
+        .logo {
+            gap: 0.525rem;
+
+            > span:not(.username) {
+                width: 2.975rem !important;
+                height: 2.975rem !important;
+
+                display: block !important;
+            }
+
+            span.username { font-size: 1.4rem; }
+        }
+
+        .options { display: none; }
+
+        div.search {
+            display: contents;
+
+            /* Button / SearchIcon */
+            & div form button {
+                border-radius: 0.35rem;
+                -webkit-border-radius: 0.35rem;
+                -moz-border-radius: 0.35rem;
+                -ms-border-radius: 0.35rem;
+                -o-border-radius: 0.35rem;
+
+                & span { width: 0.625rem !important; height: 0.625rem !important; }
+            }
+        }
+
+        nav.links {
+            display: block;
+
+            ul {
+                display: flex;
+                align-items: center;
+
+                gap: 1.4rem;
+
+                li {
+                    a {
+                        font-size: 0.8rem;
+
+                        &.active { text-decoration: underline; }
+                    }
+
+                    &:last-child {
+                        background-image: var(--gradient-contact);
+
+                        display: flex;
+                        align-items: center;
+
+                        cursor: pointer;
+
+                        a {
+                            border: 0.063rem solid transparent;
+                            text-decoration: none;
+
+                            padding: 0.7rem 1.26rem;
+
+                            &:focus { color: var(--white); border-color: var(--white); }
+                        }
+
+                        &, a {
+                            border-radius: 0.525rem;
+                            -webkit-border-radius: 0.525rem;
+                            -moz-border-radius: 0.525rem;
+                            -ms-border-radius: 0.525rem;
+                            -o-border-radius: 0.525rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Desktop */
+@media (min-width: 1480px) {
+    .container {
+        max-width: var(--max-width-desktop);
+
+        .logo {
+            gap: 0.75rem;
+
+            > span:not(.username) {
+                width: 4.25rem !important;
+                height: 4.25rem !important;
+            }
+
+            span.username { font-size: 2rem; }
+        }
+
+        /* Button / SearchIcon */
+        div.search > div form button {
+            border-radius: 0.5rem;
+            -webkit-border-radius: 0.5rem;
+            -moz-border-radius: 0.5rem;
+            -ms-border-radius: 0.5rem;
+            -o-border-radius: 0.5rem;
+
+            & span { width: 0.875rem !important; height: 0.875rem !important; }
+        }
+
+        nav.links {
+            ul {
+                gap: 2rem;
+
+                li {
+                    a { font-size: 1rem; }
+
+                    &:last-child {
+                        a { padding: 1rem 1.8rem; }
+
+                        &, a {
+                            border-radius: 0.75rem;
+                            -webkit-border-radius: 0.75rem;
+                            -moz-border-radius: 0.75rem;
+                            -ms-border-radius: 0.75rem;
+                            -o-border-radius: 0.75rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
