@@ -1,0 +1,1 @@
+export const usePreventDefault = (f: any) => (e: any) => { e.preventDefault(); f(e) }

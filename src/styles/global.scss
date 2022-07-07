@@ -2,42 +2,245 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    transition: background-color var(--transition-cb), color var(--transition-cb), border var(--transition-cb), box-shadow var(--transition-cb);
+    -webkit-transition: background-color var(--transition-cb), color var(--transition-cb), border var(--transition-cb), box-shadow var(--transition-cb);
+    -moz-transition: background-color var(--transition-cb), color var(--transition-cb), border var(--transition-cb), box-shadow var(--transition-cb);
+    -ms-transition: background-color var(--transition-cb), color var(--transition-cb), border var(--transition-cb), box-shadow var(--transition-cb);
+    -o-transition: background-color var(--transition-cb), color var(--transition-cb), border var(--transition-cb), box-shadow var(--transition-cb);
 }
-:root {}
-[data-theme='light'] {}
-[data-theme='dark'] {}
+:root {
+    --white : #FFF;
+    --black : #000;
 
+    --blue-200  : #8393AF;
+    --blue-800  : #10151e;
+    --blue-900  : #0C121C;
+    --blue-1000 : #030812;/* ~ 1° */
 
+    --pink-100 : #FFC0CB;
+    --pink-200 : #FF80B5;/* ~ 1° */
+    --pink-300 : #FF75AF;
+    --pink-200-transparency-50 : #FF80B580;
+    --pink-200-transparency-80 : #FF80B5CC;
 
-body {
-    background-color: var(--background);
-    color: var(--text);
+    --purple-200 : #7438f3;/* ~ 1° */
+    --purple-200-transparency-50 : #7438f380;
+
+    /* ~~~~~~~~~~~~~~~~~ Geral ~~~~~~~~~~~~~~~~~ */
+    --gradient-button   : linear-gradient(254.95deg, var(--pink-300) 0%, var(--purple-200) 100%);
+    --gradient-contact  : linear-gradient(72.87deg, var(--pink-200-transparency-50) 0%, var(--purple-200-transparency-50) 100%);
+    --gradient-logo     : linear-gradient(270deg, var(--pink-200-transparency-80) 15.44%, var(--purple-200-transparency-50) 141.14%);
+    --transition-cb     : 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    --luminosity-70p    : rgb(255 255 255 / 70%);
+    --luminosity-50p    : rgb(255 255 255 / 50%);
+    --luminosity-10p    : rgb(255 255 255 / 10%);
+    --luminosity-5p     : rgb(255 255 255 / 5%);
+    --shadow-5p         : rgb(0 0 0 / 5%);
+    --shadow-1p         : rgb(0 0 0 / 1%);
+    --max-width-mobile  : 39.2rem;
+    --max-width-desktop : 75rem;
+
+    /* ~~~~~~~~~~~~~~~ JSON Code ~~~~~~~~~~~~~~~ */
+    /* Colors ~ Dracula Theme */
+    --code-background : #282A36;
+    --code-foreground : #F8F8F2;
+    --code-selection  : #44475A;
+    --code-comment    : #6272A4;
+    --code-red        : #FF5555;
+    --code-orange     : #FFB86C;
+    --code-yellow     : #F1FA8C;
+    --code-green      : #50FA7B;
+    --code-purple     : #BD93F9;
+    --code-cyan       : #8BE9FD;
+    --code-pink       : #FF79C6;
+}
+//[data-theme='light'] {}
+[data-theme='dark'] {
+    /* ~~~~~~~~~~~~~~~~~ Geral ~~~~~~~~~~~~~~~~~ */
+    --background               : var(--blue-1000);
+    --title                    : var(--white);
+    --text-plain               : var(--white);
+    --text-inactive            : var(--blue-200);
+    --text-highlight           : var(--pink-200);
+    /* Scrollbar ------------ */
+    --scrollbar-bg             : transparent;
+    --scrollbar-thumb-bg       : var(--purple-200);
+    --scrollbar-corner-bg      : transparent;
+    /* Buttons -------------- */
+    --button-bg-normal         : var(--blue-900);
+    --button-bg-line           : transparent;
+    --button-bg-gradient       : var(--gradient-button);
+    --button-bg-options        : var(--luminosity-5p);
+    --button-bg-dev            : transparent;
+    --button-bg-social         : var(--luminosity-5p);
+    /* Popover -------------- */
+    --popover-search-bg        : var(--blue-800);
+    --popover-search-text      : var(--white);
+    --popover-menu-bg          : var(--blue-800);
+    --popover-menu-text        : var(--luminosity-70p);
+    --popover-menu-divider     : var(--luminosity-10p);
+    /* Mouse Selection ------ */
+    --selection-mouse-bg       : var(--luminosity-10p);
+    --selection-mouse-fg       : var(--pink-200);
+    /* Page 404 ------------- */
+    --text-404-fg             : var(--luminosity-50p);
+    --text-404-stroke         : var(--luminosity-50p);
+    --text-404-shadow-1       : var(--luminosity-50p);
+    --text-404-shadow-2       : var(--luminosity-10p);
 }
 
-body,
-button,
-input,
-textarea {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    /* font: 400 1rem "inter", sans-serif; */
+
+
+html {
+    scroll-behavior: smooth;
+
+    body {
+        width: 100vw;
+        height: 100vh;
+
+        background-color: var(--background);
+        color: var(--text-plain);
+
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
+        &,
+        input,
+        button,
+        textarea { font: 400 1rem 'Urbanist', sans-serif; }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            text-underline-position: under;
+            outline: none;
+
+            &:hover { text-decoration: underline; }
+            &:focus {
+                color: var(--text-highlight);
+                text-decoration: 0.063rem dashed underline;
+            }
+        }
+        h1 { font: 700 2.625rem 'Poppins', sans-serif; }
+        ol,
+        ul { padding-left: 0; margin-top: 0; margin-bottom: 0; }
+        li { list-style: none; }
+    }
+
+    ::selection {
+        background-color: var(--selection-mouse-bg);
+        color: var(--selection-mouse-fg);
+    }
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
-ol,
-ul {
-    padding-left: 0;
+button {
+    max-width: 30rem;
 
-    margin-top: 0;
-    margin-bottom: 0;
-}
+    background-color: transparent;
+    color: var(--text-plain);
+    border: 0.125rem solid transparent;
+    outline: none;
 
-::selection {
-    background-color: var(--bg-selection-mouse);
-    color: var(--fg-selection-mouse);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1.5rem 3rem;
+
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+
+    cursor: pointer;
+
+    &.normal {
+        background-color: var(--button-bg-normal);
+
+        &:hover { border: 0.125rem solid  var(--text-plain) }
+        &:focus { border: 0.125rem dashed var(--text-plain) }
+    }
+
+    &.line {
+        background-color: var(--button-bg-line);
+        border: 0.063rem solid var(--text-plain);
+
+        &:hover,
+        &:focus {
+            color: var(--text-highlight);
+            border-color: var(--text-highlight);
+        }
+
+        &:disabled {
+            color: var(--text-inactive);
+            border-color: var(--text-inactive);
+
+            cursor: not-allowed;
+        }
+    }
+
+    &.gradient {
+        background: var(--button-bg-gradient) border-box;
+
+        &:hover { border: 0.125rem solid  var(--text-plain) }
+        &:focus { border: 0.125rem dashed var(--text-plain) }
+    }
+
+    &.options {
+        width: 2.125rem;
+        height: 2.125rem;
+
+        padding: 0;
+
+        border-radius: 0.5rem;
+        -webkit-border-radius: 0.5rem;
+        -moz-border-radius: 0.5rem;
+        -ms-border-radius: 0.5rem;
+        -o-border-radius: 0.5rem;
+
+        &:hover { background-color: var(--button-bg-options); }
+    }
+
+    &.devLanguages {
+        width: 3.75rem;
+        height: 3.75rem;
+
+        background-color: var(--button-bg-dev);
+        font-size: 0;
+
+        padding: 0;
+
+        &:hover { border: 0.063rem solid }
+        &:focus { border: 0.063rem dashed }
+    }
+
+    &.social {
+        width: 3rem;
+        height: 3rem;
+
+        background-color: var(--button-bg-normal);
+        font-size: 0;
+
+        padding: 0;
+
+        border-radius: 100%;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        -ms-border-radius: 100%;
+        -o-border-radius: 100%;
+
+        &:hover { border: 0.063rem solid  var(--luminosity-50p) }
+        &:focus { border: 0.063rem dashed var(--luminosity-50p) }
+    }
+
+    &.inCard {
+        width: 100%;
+
+        padding: 1rem 0;
+    }
 }
 
 

@@ -1,0 +1,180 @@
+/* Mobile */
+.container {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: var(--background);
+    background-image: url(../../../public/assets/404/Personage404.png);
+    background-repeat: no-repeat;
+    background-blend-mode: luminosity;
+    background-position: center bottom;
+
+    h1, span {
+        color: var(--text-404-fg);
+        -webkit-text-stroke-width: 0.063rem;
+        -webkit-text-stroke-color: var(--text-404-stroke);
+        filter: drop-shadow(0 0 0.1rem var(--white));
+        -webkit-filter: drop-shadow(0 0 0.1rem var(--white));
+    }
+    h1 {
+        text-shadow:
+            0 0 5rem var(--text-404-shadow-2),
+            -1rem -1rem 0.6rem var(--text-404-shadow-2);
+
+        padding: 4rem 1.35rem 0;
+
+        display: inline-block;
+        text-align: center;
+    }
+
+    span, a { font-family: 'Poppins', sans-serif; font-weight: 700; }
+    span {
+        font-size: 3.875rem;
+        line-height: 0;
+
+        position: fixed;
+
+        &:nth-of-type(1),
+        &:nth-of-type(3) {
+            text-shadow:
+                0 0 3.5rem var(--text-404-shadow-1),
+                -0.5rem 2.5rem 0.5rem var(--text-404-shadow-2);
+        }
+
+        &:nth-of-type(1) {
+            left: calc(50% - 10.2rem);
+            bottom: 11rem;
+
+            transform: rotate(60deg);
+            -webkit-transform: rotate(60deg);
+            -moz-transform: rotate(60deg);
+            -ms-transform: rotate(60deg);
+            -o-transform: rotate(60deg);
+        }
+        &:nth-of-type(2) {
+            right: calc(50% - 3.75rem);
+            bottom: 14.3rem;
+
+            text-shadow:
+                0 0 5rem var(--text-404-shadow-1),
+                0 0 3rem var(--text-404-shadow-1),
+                0 0 1rem var(--text-404-shadow-1);
+
+            transform: rotate(337deg);
+            -webkit-transform: rotate(337deg);
+            -moz-transform: rotate(337deg);
+            -ms-transform: rotate(337deg);
+            -o-transform: rotate(337deg);
+        }
+        &:nth-of-type(3) {
+            right: calc(50% - 10.27rem);
+            bottom: 23rem;
+
+            transform: rotate(200deg);
+            -webkit-transform: rotate(200deg);
+            -moz-transform: rotate(200deg);
+            -ms-transform: rotate(200deg);
+            -o-transform: rotate(200deg);
+        }
+    }
+
+    a {
+        color: var(--background);
+        text-shadow: -0.125rem 0.125rem 0.5rem rgb(0 0 0 / 50%);
+        font-size: 0.85rem;
+
+        position: fixed;
+        left: calc(50% - 9rem);
+        bottom: 4.65rem;
+
+        transform: rotate(344deg);
+        -webkit-transform: rotate(344deg);
+        -moz-transform: rotate(344deg);
+        -ms-transform: rotate(344deg);
+        -o-transform: rotate(344deg);
+
+        &:focus { color: var(--purple-200); text-decoration: none; }
+    }
+}
+
+
+
+/* Mini Screen */
+@media (max-width: 320px) and (max-height: 320px) {
+    .container {
+        background: none;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+
+        & h1 { font-size: 1.5rem; padding: 0; }
+        & a {
+            color: var(--text-highlight);
+
+            position: initial;
+
+            transform: none;
+            -webkit-transform: none;
+            -moz-transform: none;
+            -ms-transform: none;
+            -o-transform: none;
+
+            &::before { content: 'Error404 ::::::: '; }
+            &::after { content: ' ↩'; }
+        }
+    }
+}
+
+/* Mobile / Tablet */
+@media (min-width: 580px) { .container h1 { font-size: 3rem; padding: 5rem 0 0; } }
+@media (min-width: 680px) { .container h1 { font-size: 4rem; } }
+
+/* Tablet / Desktop */
+@media (min-width: 780px) {
+    .container {
+        background-image: url(../../../public/assets/404/Personage404-desktop.png);
+
+        h1 { display: none; }
+        span {
+            font-size: 7rem;
+
+            &:nth-of-type(1) { left:  calc(50% - 23.2rem); }
+            &:nth-of-type(2) { right: calc(50% - 8.3rem); bottom: 25.8rem; }
+            &:nth-of-type(3) {
+                text-shadow:
+                    0 0 3.5rem var(--text-404-shadow-1),
+                    -2.5rem -1.5rem 0.5rem var(--text-404-shadow-2);
+
+                right: calc(50% - 26rem);
+
+                @media (min-height: 520px) {
+                    text-shadow:
+                        0 0 3.5rem var(--text-404-shadow-1),
+                        -2.5rem 1.5rem 0.5rem var(--text-404-shadow-2);
+
+                    bottom: 30rem;
+                }
+                @media (min-height: 620px) {
+                    text-shadow:
+                        0 0 3.5rem var(--text-404-shadow-1),
+                        -2.5rem 2.5rem 0.5rem var(--text-404-shadow-2);
+
+                    bottom: 38rem;
+                }
+            }
+        }
+        a {
+            font-size: 1.125rem;
+
+            left: calc(50% - 12.6rem);
+            bottom: 7.5rem;
+        }
+    }
+}
