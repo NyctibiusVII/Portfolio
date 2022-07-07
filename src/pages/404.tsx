@@ -1,13 +1,13 @@
-import type { NextPage } from 'next'
+/* Import ---------------------------------------------------------------------- */ // - x70
 
-// import _404HeadlightImage from '../../public/assets/404/Headlight.svg'
-// import _404PersonageImage from '../../public/assets/404/Personage3D.png'
-// import _404FlagImage      from '../../public/assets/404/Flag3D.png'
+import type { NextPage } from 'next'
 
 import Head  from 'next/head'
 import Link  from 'next/link'
 
 import styles from '../styles/pages/404.module.scss'
+
+/* ---------------------------------------------------------------------- */
 
 const _404: NextPage = () => {
     return (
