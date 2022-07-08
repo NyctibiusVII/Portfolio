@@ -187,7 +187,7 @@ export const Search = ({ isPopover = true }: SearchProps) => {
                     min-height: 4.75rem;
 
                     background-color: var(--popover-search-bg);
-                    background-image: url(/assets/header/Hand3D.png);
+                    background-image: url(/assets/header/LikeHand.png);
                     background-repeat: no-repeat;
                     background-blend-mode: luminosity;
                     background-position: center bottom;
