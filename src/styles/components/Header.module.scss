@@ -15,25 +15,6 @@
 
     z-index: 100;
 
-    .logo {
-        display: flex;
-        align-items: center;
-
-        > span:not(.username) { display: none !important; }
-
-        span.username {
-            background-image: var(--gradient-logo);
-            background-clip: text;
-            text-fill-color: transparent;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            color: var(--white);
-
-            font-size: 1.25rem;
-            font-weight: 700;
-        }
-    }
-
     .options {
         display: flex;
         align-items: center;
@@ -52,19 +33,6 @@
 @media (min-width: 780px) {
     .container {
         max-width: 60rem;
-
-        .logo {
-            gap: 0.525rem;
-
-            > span:not(.username) {
-                width: 2.975rem !important;
-                height: 2.975rem !important;
-
-                display: block !important;
-            }
-
-            span.username { font-size: 1.4rem; }
-        }
 
         .options { display: none; }
 
@@ -134,17 +102,6 @@
 @media (min-width: 1480px) {
     .container {
         max-width: var(--max-width-desktop);
-
-        .logo {
-            gap: 0.75rem;
-
-            > span:not(.username) {
-                width: 4.25rem !important;
-                height: 4.25rem !important;
-            }
-
-            span.username { font-size: 2rem; }
-        }
 
         /* Button / SearchIcon */
         div.search > div form button {

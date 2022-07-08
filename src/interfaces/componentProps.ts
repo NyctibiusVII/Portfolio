@@ -13,6 +13,10 @@ export interface SearchItensType {
     response: string
 }
 
+export interface LogoProps {
+    styleColor?: '1' | '2'
+}
+
 export interface LoadingProps {
     color?:   string
     width?:   string

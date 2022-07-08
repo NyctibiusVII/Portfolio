@@ -4,12 +4,12 @@ import { Key, useEffect, useState } from 'react'
 
 import { useHeaderLinks } from '../hooks/useHeaderLinks'
 
+import { Logo }          from './ui/Logo'
 import { Search }        from './ui/Popover/Search/Search'
 import { PopoverMenu }   from './ui/Popover/Menu'
 import { PopoverSearch } from './ui/Popover/Search'
 
 import Link   from 'next/link'
-import Image  from 'next/image'
 import Router from 'next/router'
 
 import styles from '../styles/components/Header.module.scss'
@@ -24,15 +24,7 @@ export const Header = () => {
 
     return (
         <header className={styles.container}>
-            <div className={styles.logo}>
-                <Image
-                    src={`/assets/header/logo.svg`}
-                    alt={`logo icon`}
-                    width={68}
-                    height={68}
-                />
-                <span className={styles.username}>NyctibiusVII</span>
-            </div>
+            <Logo />
 
             {/* Mobile */}
             <div className={styles.options}>
