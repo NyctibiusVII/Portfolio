@@ -33,6 +33,17 @@ export interface LogoProps { styleColor?: StyleColorType }
 
 
 
+/**
+ * Defines the color and size that the Loading component will receive.
+ *
+ * @param color default { `"#FF80B5"` } - Only hexadecimal colors are allowed.
+ * @param width default { `30` }
+ * @param height default { `30` }
+ * @param percent default { `true` }
+ *
+ * @alias ReactLoading
+ * @see https://github.com/fakiolinho/react-loading
+ */
 export interface LoadingProps {
     color?:   string
     width?:   number
