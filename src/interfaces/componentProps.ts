@@ -13,9 +13,25 @@ export interface SearchItensType {
     response: string
 }
 
-export interface LogoProps {
-    styleColor?: '1' | '2'
-}
+
+
+/**
+ * Set a style to the component
+ *
+ * @value { `"1"` } : Purple and pink color
+ * @value { `"2"` } : Purple and transparent color
+ */
+type StyleColorType = '1' | '2'
+/**
+ * Defines the type of style and design that the Logo component will receive.
+ *
+ * @param styleColor default { `"1"` } - The logo style
+ *
+ * @type { StyleColorType }
+ */
+export interface LogoProps { styleColor?: StyleColorType }
+
+
 
 export interface LoadingProps {
     color?:   string
