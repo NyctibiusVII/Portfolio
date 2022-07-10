@@ -15,6 +15,7 @@ const Home: NextPage = () => {
         <>
             <Head><title>Portfolio | Home</title></Head>
 
+            <Header />
             <div className={styles.container}>
                 <Header />
 

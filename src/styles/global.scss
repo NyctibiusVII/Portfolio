@@ -74,6 +74,8 @@
     --button-bg-options        : var(--luminosity-5p);
     --button-bg-dev            : transparent;
     --button-bg-social         : var(--luminosity-5p);
+    /* Header --------------- */
+    --box-shadow-header        : var(--blue-900-transparency-50);
     /* Popover -------------- */
     --popover-search-bg        : var(--blue-800);
     --popover-search-text      : var(--white);
@@ -96,9 +98,6 @@ html {
     scroll-behavior: smooth;
 
     body {
-        width: 100vw;
-        height: 100vh;
-
         background-color: var(--background);
         color: var(--text-plain);
 

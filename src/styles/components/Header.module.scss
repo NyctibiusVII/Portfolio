@@ -1,57 +1,76 @@
 /* Mobile */
 .container {
-    max-width: var(--max-width-mobile);
     width: 100%;
     height: 5rem;
-
-    padding: 0 2rem;
 
     position: fixed;
     top: 0;
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 
     z-index: 100;
 
-    .options {
-        display: flex;
-        align-items: center;
-
-        /* SearchIcon */
-        > div > div div:last-child form button span { width: 0.75rem !important; height: 0.75rem !important; }
+    &.scrolled {
+        box-shadow: 0 1rem 1rem 0 var(--box-shadow-header);
+        backdrop-filter: blur(0.25rem);
     }
 
-    div.search,
-    nav.links { display: none; }
-}
+    .content {
+        max-width: var(--max-width-mobile);
+        width: 100%;
 
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
+        .options {
+            display: flex;
+            align-items: center;
+        }
 
-/* Tablet / Desktop */
-@media (min-width: 780px) {
-    .container {
-        max-width: 60rem;
+        /* (Popover > Button) && (Button) */
+        .options > div > div div:last-child form,
+        .search div form {
+            button {
+                width: 1.488rem;
+                height: 1.488rem;
 
-        .options { display: none; }
-
-        div.search {
-            display: contents;
-
-            /* Button / SearchIcon */
-            & div form button {
                 border-radius: 0.35rem;
                 -webkit-border-radius: 0.35rem;
                 -moz-border-radius: 0.35rem;
                 -ms-border-radius: 0.35rem;
                 -o-border-radius: 0.35rem;
 
-                & span { width: 0.625rem !important; height: 0.625rem !important; }
+                filter: invert(61%) sepia(21%) saturate(408%) hue-rotate(179deg) brightness(140%) contrast(86%);
+                -webkit-filter: invert(61%) sepia(21%) saturate(408%) hue-rotate(179deg) brightness(140%) contrast(86%);
+
+                /* SearchIcon */
+                span { width: 0.613rem !important; height: 0.613rem !important; }
             }
+            input:not(:placeholder-shown) ~ button { filter: none; }
         }
 
-        nav.links {
+        .search, .links { display: none; }
+    }
+}
+
+
+
+/* Mobile / Tablet */
+@media (max-width: 980px) { .container { padding: 0 var(--padding-mobile); } }
+
+/* Tablet / Desktop */
+@media (min-width: 780px) {
+    .container .content {
+        max-width: var(--max-width-tablet);
+
+        .options { display: none; }
+
+        .search { display: contents; }
+
+        .links {
             display: block;
 
             ul {
@@ -100,11 +119,14 @@
 
 /* Desktop */
 @media (min-width: 1480px) {
-    .container {
+    .container .content {
         max-width: var(--max-width-desktop);
 
-        /* Button / SearchIcon */
-        div.search > div form button {
+        /* Button > SearchIcon */
+        .search > div form button {
+            width: 2.125rem;
+            height: 2.125rem;
+
             border-radius: 0.5rem;
             -webkit-border-radius: 0.5rem;
             -moz-border-radius: 0.5rem;
@@ -114,7 +136,7 @@
             & span { width: 0.875rem !important; height: 0.875rem !important; }
         }
 
-        nav.links {
+        .links {
             ul {
                 gap: 2rem;
 
