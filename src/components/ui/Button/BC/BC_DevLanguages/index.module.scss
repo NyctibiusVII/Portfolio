@@ -1,0 +1,53 @@
+/* Mobile */
+.container {
+    width: 1.5rem;
+    height: 1.5rem;
+
+    background-color: var(--button-bg-dev);
+    color: var(--text-plain);
+    border: 0.063rem solid transparent;
+    font-size: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    -moz-border-radius: 0.625rem;
+    -ms-border-radius: 0.625rem;
+    -o-border-radius: 0.625rem;
+
+    &:hover { border: 0.063rem solid }
+    &:focus { border: 0.063rem dashed }
+}
+
+
+
+/* Tablet / Desktop */
+@media (min-width: 780px) {
+    .container {
+        width: 2.625rem;
+        height: 2.625rem;
+
+        border-radius: 0.7rem;
+        -webkit-border-radius: 0.7rem;
+        -moz-border-radius: 0.7rem;
+        -ms-border-radius: 0.7rem;
+        -o-border-radius: 0.7rem;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1480px) {
+    .container {
+        width: 3.75rem;
+        height: 3.75rem;
+
+        border-radius: 1rem;
+        -webkit-border-radius: 1rem;
+        -moz-border-radius: 1rem;
+        -ms-border-radius: 1rem;
+        -o-border-radius: 1rem;
+    }
+}
