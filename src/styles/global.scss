@@ -33,6 +33,7 @@
 
     /* ~~~~~~~~~~~~~~~~~ Geral ~~~~~~~~~~~~~~~~~ */
     --gradient-button   : linear-gradient(254.95deg, var(--pink-300) 0%, var(--purple-200) 100%);
+    --gradient-rights   : linear-gradient(270deg, var(--purple-200) 0%, var(--blue-400-transparency-30) 100%);
     --gradient-contact  : linear-gradient(72.87deg, var(--pink-200-transparency-50) 0%, var(--purple-200-transparency-50) 100%);
     --gradient-logo-1   : linear-gradient(270deg, var(--pink-200-transparency-80) 15.44%, var(--purple-200-transparency-50) 141.14%);
     --gradient-logo-2   : linear-gradient(180deg, var(--purple-200) 10.02%, transparent 94.49%);
@@ -43,8 +44,10 @@
     --luminosity-5p     : rgb(255 255 255 / 5%);
     --shadow-5p         : rgb(0 0 0 / 5%);
     --shadow-1p         : rgb(0 0 0 / 1%);
-    --max-width-mobile  : 39.2rem;
-    --max-width-desktop : 75rem;
+    --padding-mobile    : 2rem;
+    --max-width-mobile  : 35.2rem;
+    --max-width-tablet  : 56rem;
+    --max-width-desktop : 71rem;
 
     /* ~~~~~~~~~~~~~~~ JSON Code ~~~~~~~~~~~~~~~ */
     /* Colors ~ Dracula Theme */
@@ -90,11 +93,14 @@
     /* Mouse Selection ------ */
     --selection-mouse-bg       : var(--luminosity-10p);
     --selection-mouse-fg       : var(--pink-200);
+    /* Footer --------------- */
+    --text-footer-info-fg      : var(--blue-200);
+    --text-footer-rights-fg    : var(--gradient-rights);
     /* Page 404 ------------- */
-    --text-404-fg             : var(--luminosity-50p);
-    --text-404-stroke         : var(--luminosity-50p);
-    --text-404-shadow-1       : var(--luminosity-50p);
-    --text-404-shadow-2       : var(--luminosity-10p);
+    --text-404-fg              : var(--luminosity-50p);
+    --text-404-stroke          : var(--luminosity-50p);
+    --text-404-shadow-1        : var(--luminosity-50p);
+    --text-404-shadow-2        : var(--luminosity-10p);
 }
 
 

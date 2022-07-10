@@ -3,6 +3,7 @@
 import type { NextPage } from 'next'
 
 import { Header } from '../components/Header'
+import { Footer } from '../components/Footer'
 
 import Head from 'next/head'
 
@@ -17,10 +18,21 @@ const Home: NextPage = () => {
 
             <Header />
             <div className={styles.container}>
-                <Header />
+                    <main className={styles.main}>
+                        <h1>HI, I&apos;m Matheus Vidigal</h1>
+                    </main>
 
-                <button className={`${styles.abc} line`}>B U T T O N</button>
+                    <section>
+                        <h2>Stack</h2>
+                    </section>
+                    <section>
+                        <h2>Projects</h2>
+                    </section>
+                    <section>
+                        <h2>Most Used Technologies</h2>
+                    </section>
             </div>
+            <Footer />
         </>
     )
 }
