@@ -14,9 +14,13 @@
     --black : #000;
 
     --blue-200  : #8393AF;
-    --blue-800  : #10151e;
-    --blue-900  : #0C121C;
+    --blue-400  : #1915CA;
+    --blue-700  : #10151e;
+    --blue-800  : #0C121C;
+    --blue-900  : #04070E;
     --blue-1000 : #030812;/* ~ 1° */
+    --blue-400-transparency-30 : #1915CA4D;
+    --blue-900-transparency-50 : #04070E80;
 
     --pink-100 : #FFC0CB;
     --pink-200 : #FF80B5;/* ~ 1° */
@@ -68,7 +72,7 @@
     --scrollbar-thumb-bg       : var(--purple-200);
     --scrollbar-corner-bg      : transparent;
     /* Buttons -------------- */
-    --button-bg-normal         : var(--blue-900);
+    --button-bg-normal         : var(--blue-800);
     --button-bg-line           : transparent;
     --button-bg-gradient       : var(--gradient-button);
     --button-bg-options        : var(--luminosity-5p);
@@ -77,9 +81,9 @@
     /* Header --------------- */
     --box-shadow-header        : var(--blue-900-transparency-50);
     /* Popover -------------- */
-    --popover-search-bg        : var(--blue-800);
+    --popover-search-bg        : var(--blue-700);
     --popover-search-text      : var(--white);
-    --popover-menu-bg          : var(--blue-800);
+    --popover-menu-bg          : var(--blue-700);
     --popover-menu-text        : var(--luminosity-70p);
     --popover-menu-divider     : var(--luminosity-10p);
     /* Mouse Selection ------ */
@@ -123,122 +127,14 @@ html {
             }
         }
         h1 { font: 700 2.625rem 'Poppins', sans-serif; }
-        ol,
-        ul { padding-left: 0; margin-top: 0; margin-bottom: 0; }
         li { list-style: none; }
+        ol, ul { padding-left: 0; margin-top: 0; margin-bottom: 0; }
+        button { outline: none; cursor: pointer; }
     }
 
     ::selection {
         background-color: var(--selection-mouse-bg);
         color: var(--selection-mouse-fg);
-    }
-}
-
-button {
-    max-width: 30rem;
-
-    background-color: transparent;
-    color: var(--text-plain);
-    border: 0.125rem solid transparent;
-    outline: none;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 1.5rem 3rem;
-
-    border-radius: 1rem;
-    -webkit-border-radius: 1rem;
-    -moz-border-radius: 1rem;
-    -ms-border-radius: 1rem;
-    -o-border-radius: 1rem;
-
-    cursor: pointer;
-
-    &.normal {
-        background-color: var(--button-bg-normal);
-
-        &:hover { border: 0.125rem solid  var(--text-plain) }
-        &:focus { border: 0.125rem dashed var(--text-plain) }
-    }
-
-    &.line {
-        background-color: var(--button-bg-line);
-        border: 0.063rem solid var(--text-plain);
-
-        &:hover,
-        &:focus {
-            color: var(--text-highlight);
-            border-color: var(--text-highlight);
-        }
-
-        &:disabled {
-            color: var(--text-inactive);
-            border-color: var(--text-inactive);
-
-            cursor: not-allowed;
-        }
-    }
-
-    &.gradient {
-        background: var(--button-bg-gradient) border-box;
-
-        &:hover { border: 0.125rem solid  var(--text-plain) }
-        &:focus { border: 0.125rem dashed var(--text-plain) }
-    }
-
-    &.options {
-        width: 2.125rem;
-        height: 2.125rem;
-
-        padding: 0;
-
-        border-radius: 0.5rem;
-        -webkit-border-radius: 0.5rem;
-        -moz-border-radius: 0.5rem;
-        -ms-border-radius: 0.5rem;
-        -o-border-radius: 0.5rem;
-
-        &:hover { background-color: var(--button-bg-options); }
-    }
-
-    &.devLanguages {
-        width: 3.75rem;
-        height: 3.75rem;
-
-        background-color: var(--button-bg-dev);
-        font-size: 0;
-
-        padding: 0;
-
-        &:hover { border: 0.063rem solid }
-        &:focus { border: 0.063rem dashed }
-    }
-
-    &.social {
-        width: 3rem;
-        height: 3rem;
-
-        background-color: var(--button-bg-normal);
-        font-size: 0;
-
-        padding: 0;
-
-        border-radius: 100%;
-        -webkit-border-radius: 100%;
-        -moz-border-radius: 100%;
-        -ms-border-radius: 100%;
-        -o-border-radius: 100%;
-
-        &:hover { border: 0.063rem solid  var(--luminosity-50p) }
-        &:focus { border: 0.063rem dashed var(--luminosity-50p) }
-    }
-
-    &.inCard {
-        width: 100%;
-
-        padding: 1rem 0;
     }
 }
 

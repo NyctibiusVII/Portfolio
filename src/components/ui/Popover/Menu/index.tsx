@@ -4,8 +4,9 @@ import { useContext } from 'react'
 
 import { TogglePopoverItemsContext } from '../../../../contexts/TogglePopoverItemsContext'
 
-import { Menu }  from './Menu'
-import { Arrow } from '../Arrow'
+import { Menu }   from './Menu'
+import { Arrow }  from '../Arrow'
+import { Button } from '../../Button'
 
 import Image from 'next/image'
 
@@ -19,14 +20,14 @@ export const PopoverMenu = ({ arrow = true }: PopoverMenuProps) => {
     return (
         <>
             <div className='popoverContainer'>
-                <button className='options' onClick={() => handleOpen({ type: 'menu' })}>
+                <Button styleBtn='options' onClick={() => handleOpen({ type: 'menu' })}>
                     <Image
                         src={`/assets/header/menu.svg`}
                         alt={`menu icon`}
                         width={14}
                         height={14}
                     />
-                </button>
+                </Button>
 
                 { isOpenMenu &&
                     <div className='popoverItem'>

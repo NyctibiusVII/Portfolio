@@ -5,6 +5,7 @@ import { Key, useEffect, useState } from 'react'
 import { usePreventDefault } from '../../../../hooks/usePreventDefault'
 import { SearchItensType }   from '../../../../interfaces/componentProps'
 
+import { Button }  from '../../Button'
 import { Loading } from '../../Loading'
 
 import Image from 'next/image'
@@ -20,7 +21,7 @@ export const Search = ({ isPopover = true }: SearchProps) => {
 
     const [isOpenResponse, setIsOpenResponse] = useState(false)
     const [isSearching,       setIsSearching] = useState(false)
-    const [searchResults,   setSearchResults] = useState([''])
+    const [searchResults,   setSearchResults] = useState<Array<string | null>>([])
 
     const handleParam = (setValue: any) => (e: any) => setValue(e.target.value)
     const handleSubmit = usePreventDefault(() => {
@@ -51,14 +52,14 @@ export const Search = ({ isPopover = true }: SearchProps) => {
                     required
                 />
 
-                <button type='submit' className='options'>
+                <Button type='submit' styleBtn='options' className='formButton'>
                     <Image
                         src='/assets/header/search.svg'
                         alt='search icon'
                         width={14}
                         height={14}
                     />
-                </button>
+                </Button>
             </form>
 
             { isOpenResponse &&
@@ -128,20 +129,6 @@ export const Search = ({ isPopover = true }: SearchProps) => {
                 }
                 form input::placeholder { color: var(--blue-200); }
 
-                form button {
-                    width: 1.488rem;
-                    height: 1.488rem;
-
-                    filter:
-                        invert(61%)
-                        sepia(21%)
-                        saturate(408%)
-                        hue-rotate(179deg)
-                        brightness(140%)
-                        contrast(86%);
-                }
-                form input:not(:placeholder-shown) ~ button { filter: none; }
-
                 @media (min-width: 338px) { form input { max-width: ${isPopover ? 'initial' : '18.75rem'}; } }
                 @media (min-width: 1480px) {
                     form {
@@ -150,7 +137,6 @@ export const Search = ({ isPopover = true }: SearchProps) => {
                         border-radius: ${isPopover ? '0 0 0.5rem 0.5rem' : '0.5rem'};
                     }
                     form input { height: 2rem; font-size: 1rem; }
-                    form button { width: 2.125rem; height: 2.125rem; }
                 }
 
                 /* ------------------------------------------------- */

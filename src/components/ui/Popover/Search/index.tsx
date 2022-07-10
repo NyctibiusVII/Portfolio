@@ -4,8 +4,9 @@ import { useContext } from 'react'
 
 import { TogglePopoverItemsContext } from '../../../../contexts/TogglePopoverItemsContext'
 
-import { Search } from './Search'
 import { Arrow }  from '../Arrow'
+import { Search } from './Search'
+import { Button } from '../../Button'
 
 import Image from 'next/image'
 
@@ -19,14 +20,14 @@ export const PopoverSearch = ({ arrow = true }: PopoverSearchProps) => {
     return (
         <>
             <div className='popoverContainer'>
-                <button className='options' onClick={() => handleOpen({ type: 'search' })}>
+                <Button styleBtn='options' onClick={() => handleOpen({ type: 'search' })}>
                     <Image
                         src={`/assets/header/search.svg`}
                         alt={`search icon`}
                         width={14}
                         height={14}
                     />
-                </button>
+                </Button>
 
                 { isOpenSearch &&
                     <div className='popoverItem'>
