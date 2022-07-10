@@ -19,7 +19,7 @@ export interface LogoProps {
 
 export interface LoadingProps {
     color?:   string
-    width?:   string
-    height?:  string
+    width?:   number
+    height?:  number
     percent?: boolean
 }
