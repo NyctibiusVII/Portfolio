@@ -42,7 +42,7 @@ export const Footer = () => {
                             </Button>
 
                             <div className={styles.info}>
-                                <h6>Phone</h6>
+                                <h3>Phone</h3>
                                 <p>{myInfos.phone}</p>
                             </div>
                         </div>
@@ -58,7 +58,7 @@ export const Footer = () => {
                             </Button>
 
                             <div className={styles.info}>
-                                <h6>Mail</h6>
+                                <h3>Mail</h3>
                                 <p>{myInfos.email}</p>
                             </div>
                         </div>
@@ -74,7 +74,7 @@ export const Footer = () => {
                             </Button>
 
                             <div className={styles.info}>
-                                <h6>Address</h6>
+                                <h3>Address</h3>
                                 <p>{myInfos.address}</p>
                             </div>
                         </div>
