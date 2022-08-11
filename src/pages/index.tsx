@@ -2,8 +2,9 @@
 
 import type { NextPage } from 'next'
 
-import { Header } from '../components/Header'
-import { Footer } from '../components/Footer'
+import { Header }       from '../components/Header'
+import { Technologies } from '../components/Technologies'
+import { Footer }       from '../components/Footer'
 
 import Head from 'next/head'
 
@@ -28,9 +29,7 @@ const Home: NextPage = () => {
                     <section>
                         <h2>Projects</h2>
                     </section>
-                    <section>
-                        <h2>Most Used Technologies</h2>
-                    </section>
+                    <Technologies />
             </div>
             <Footer />
         </>

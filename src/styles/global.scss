@@ -48,6 +48,10 @@
     --max-width-mobile  : 35.2rem;
     --max-width-tablet  : 56rem;
     --max-width-desktop : 71rem;
+    --slideSpeedPartOne : 40s;
+    --slideSpeedPartTwo : 40s;
+    --slideSizePartOne  : 8.2rem;
+    --slideSizePartTwo  : 7.5rem;
 
     /* ~~~~~~~~~~~~~~~ JSON Code ~~~~~~~~~~~~~~~ */
     /* Colors ~ Dracula Theme */
@@ -157,6 +161,7 @@ html {
             }
         }
         h1 { font: 700 2.625rem 'Poppins', sans-serif; }
+        h2 { font: 700 1.5rem 'Urbanist', sans-serif; }
         li { list-style: none; }
         ol, ul { padding-left: 0; margin-top: 0; margin-bottom: 0; }
         button { outline: none; cursor: pointer; }
