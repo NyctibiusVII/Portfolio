@@ -20,9 +20,7 @@ const Home: NextPage = () => {
 
             <Header />
             <div className={styles.container}>
-                    <main className={styles.main}>
-                        <h1>HI, I&apos;m Matheus Vidigal</h1>
-                    </main>
+                <div id={styles.bg} />
 
                 <Hero />
                 <section id='stack' translate='no'>
