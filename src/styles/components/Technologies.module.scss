@@ -1,38 +1,3 @@
-@keyframes slideLeftOne {
-	0% {
-        transform: translateX(0);
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0);
-        -ms-transform: translateX(0);
-        -o-transform: translateX(0);
-    }
-	100% {
-        transform: translateX(calc((var(--slideSizePartOne) - (var(--slideSizePartOne) * 2)) * 9));
-        -webkit-transform: translateX(calc((var(--slideSizePartOne) - (var(--slideSizePartOne) * 2)) * 9));
-        -moz-transform: translateX(calc((var(--slideSizePartOne) - (var(--slideSizePartOne) * 2)) * 9));
-        -ms-transform: translateX(calc((var(--slideSizePartOne) - (var(--slideSizePartOne) * 2)) * 9));
-        -o-transform: translateX(calc((var(--slideSizePartOne) - (var(--slideSizePartOne) * 2)) * 9));
-    }
-}
-@keyframes slideLeftTwo {
-	0% {
-        transform: translateX(0);
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0);
-        -ms-transform: translateX(0);
-        -o-transform: translateX(0);
-    }
-	100% {
-        transform: translateX(calc((var(--slideSizePartTwo) - (var(--slideSizePartTwo) * 2)) * 9));
-        -webkit-transform: translateX(calc((var(--slideSizePartTwo) - (var(--slideSizePartTwo) * 2)) * 9));
-        -moz-transform: translateX(calc((var(--slideSizePartTwo) - (var(--slideSizePartTwo) * 2)) * 9));
-        -ms-transform: translateX(calc((var(--slideSizePartTwo) - (var(--slideSizePartTwo) * 2)) * 9));
-        -o-transform: translateX(calc((var(--slideSizePartTwo) - (var(--slideSizePartTwo) * 2)) * 9));
-    }
-}
-
-
-
 /* Mobile */
 .container {
     max-width: var(--max-width-mobile);
@@ -60,10 +25,44 @@
             &.slideTrackOne {
                 animation: slideLeftOne var(--slideSpeedPartOne) linear infinite;
                 -webkit-animation: slideLeftOne var(--slideSpeedPartOne) linear infinite;
+
+                @keyframes slideLeftOne {
+                    from {
+                        transform: translateX(0);
+                        -webkit-transform: translateX(0);
+                        -moz-transform: translateX(0);
+                        -ms-transform: translateX(0);
+                        -o-transform: translateX(0);
+                    }
+                    to {
+                        transform: translateX(calc((var(--slideSizePartOne) - (var(--slideSizePartOne) * 2)) * 9));
+                        -webkit-transform: translateX(calc((var(--slideSizePartOne) - (var(--slideSizePartOne) * 2)) * 9));
+                        -moz-transform: translateX(calc((var(--slideSizePartOne) - (var(--slideSizePartOne) * 2)) * 9));
+                        -ms-transform: translateX(calc((var(--slideSizePartOne) - (var(--slideSizePartOne) * 2)) * 9));
+                        -o-transform: translateX(calc((var(--slideSizePartOne) - (var(--slideSizePartOne) * 2)) * 9));
+                    }
+                }
             }
             &.slideTrackTwo {
                 animation: slideLeftTwo var(--slideSpeedPartTwo) linear infinite;
                 -webkit-animation: slideLeftTwo var(--slideSpeedPartTwo) linear infinite;
+
+                @keyframes slideLeftTwo {
+                    from {
+                        transform: translateX(0);
+                        -webkit-transform: translateX(0);
+                        -moz-transform: translateX(0);
+                        -ms-transform: translateX(0);
+                        -o-transform: translateX(0);
+                    }
+                    to {
+                        transform: translateX(calc((var(--slideSizePartTwo) - (var(--slideSizePartTwo) * 2)) * 9));
+                        -webkit-transform: translateX(calc((var(--slideSizePartTwo) - (var(--slideSizePartTwo) * 2)) * 9));
+                        -moz-transform: translateX(calc((var(--slideSizePartTwo) - (var(--slideSizePartTwo) * 2)) * 9));
+                        -ms-transform: translateX(calc((var(--slideSizePartTwo) - (var(--slideSizePartTwo) * 2)) * 9));
+                        -o-transform: translateX(calc((var(--slideSizePartTwo) - (var(--slideSizePartTwo) * 2)) * 9));
+                    }
+                }
             }
 
             .slide {
@@ -86,13 +85,12 @@
             }
         }
     }
-
 }
 
 
 
 /* Tablet / Desktop */
-@media (min-width: 780px) { .container { max-width: var(--max-width-tablet); } }
+@media screen and (min-width: 780px) { .container { max-width: var(--max-width-tablet); } }
 
 /* Desktop */
-@media (min-width: 1480px) { .container { max-width: var(--max-width-desktop); } }
+@media screen and (min-width: 1480px) { .container { max-width: var(--max-width-desktop); } }

@@ -69,10 +69,15 @@
 
 
 /* Mobile / Tablet */
-@media (max-width: 980px) { .container { padding-left: var(--padding-mobile); padding-right: var(--padding-mobile); } }
+@media screen and (max-width: 980px) {
+    .container {
+        padding-left: var(--padding-mobile);
+        padding-right: var(--padding-mobile);
+    }
+}
 
 /* Tablet / Desktop */
-@media (min-width: 780px) {
+@media screen and (min-width: 780px) {
     .container {
         background-image: url(../../../public/assets/footer/PersonageBook-desktop.png);
         background-position: right 8rem bottom -0.1rem;
@@ -98,6 +103,7 @@
             }
             .rightsReserved {
                 background-image: var(--text-footer-rights-fg);
+                background-size: 1200% 1200%;
                 background-clip: text;
                 text-fill-color: transparent;
                 -webkit-background-clip: text;
@@ -105,17 +111,29 @@
                 color: var(--white);
                 font-size: 0.75rem;
                 line-height: 2rem;
+
+                animation: AnimationGradient 10s linear infinite;
+                -webkit-animation: AnimationGradient 10s linear infinite;
+
+                @keyframes AnimationGradient {
+                    from { background-position: 0% 50%   }
+                    to   { background-position: 100% 50% }
+                }
             }
         }
     }
 }
-
-/* Tablet / Desktop */
-@media (min-width: 960px) { .container { background-position: right calc(-1vw + 37%) bottom -0.1rem; } }
+@media screen and (min-width: 960px) {
+    .container {
+        background-position: right calc(50vw - 22rem) bottom -0.1rem;
+    }
+}
 
 /* Desktop */
-@media (min-width: 1480px) {
+@media screen and (min-width: 1480px) {
     .container {
+        background-position: right calc(50vw - 27rem) bottom -0.1rem;
+
         > div { max-width: var(--max-width-desktop); gap: 3.625rem }
 
         .content {
