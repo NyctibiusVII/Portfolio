@@ -19,7 +19,7 @@ export const Menu = () => {
                 { menuItens.map((item, index: Key) => {
                     return (
                         <Fragment key={index}>
-                            <li>
+                            <li translate={`${index === 0 || index === 2 ? 'no' : 'yes'}`}>
                                 <Link href={item.href}>
                                     <a className={currentPath === item.href ? 'active' : undefined}>{item.content}</a>
                                 </Link>

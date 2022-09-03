@@ -54,7 +54,7 @@ export const Header = () => {
                     <ul>
                         { headerLinks.map((item, index: Key) => {
                             return (
-                                <li key={index}>
+                                <li key={index} translate={`${index === 0 || index === 2 ? 'no' : 'yes'}`}>
                                     <Link href={item.href}>
                                         <a className={currentPath === item.href ? styles.active : undefined}>{item.content}</a>
                                     </Link>

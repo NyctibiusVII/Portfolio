@@ -8,15 +8,15 @@ export default class MyDocument extends Document {
     render() {
         const
             enUS  = 'en-US',
-            title = 'Portfolio',
+            title = 'Portfolio - (Matheus Vidigal)',
             site  = 'Portfolio',
             link  = 'https://nyctibiusvii.vercel.app',
-            favicon      = `${ link }/favicon.svg`,
-            homeImg      = `${ link }/HomePage-1366x768.png`,
-            NyctibiusVII = 'Matheus Vidigal - (NyctibiusVII)',
-            NyctibiusVII_twitter = '@NyctibiusVII',
-            description = '',
-            keywords    = ''
+            favicon = `${ link }/favicon.svg`,
+            homeImg = `${ link }/HomePage-1366x768.png`,
+            creator = 'Matheus Vidigal - (NyctibiusVII)',
+            userTwitter = '@NyctibiusVII',
+            description = 'Meu portfolio 💻',
+            keywords    = 'Portfolio, Develop, Desenvolvedor, Front-end, FullStack, Matheus Vidigal, ReactJS, NextJS'
 
         return (
             <Html lang={ enUS }>
@@ -24,22 +24,22 @@ export default class MyDocument extends Document {
                     <meta charSet='utf-8'                  />
                     <meta name='language' content={ enUS } />
 
-                    <meta name='robots'       content='all'     />
-                    <meta name='rating'       content='general' />
-                    <meta name='distribution' content='global'  />
-                    <meta name='description'  content=''        />
+                    <meta name='robots'       content='all'           />
+                    <meta name='rating'       content='general'       />
+                    <meta name='distribution' content='global'        />
+                    <meta name='description'  content={ description } />
 
                     <meta name='MobileOptimized'         content='320'                        />
                     <meta name='HandheldFriendly'        content='True'                       />
-                    <meta name='google'                  content='notranslate'                />
+                    <meta name='google'                  content='translate'                  />
                     <meta name='referrer'                content='no-referrer-when-downgrade' />
                     <meta name='theme-color'             content='#030812'                  />
                     <meta name='msapplication-TileColor' content='#030812'                  />
                     <meta name='msapplication-TileImage' content={ favicon }                  />
 
-                    <meta name='author'   content={ NyctibiusVII } />
-                    <meta name='creator'  content={ NyctibiusVII } />
-                    <meta name='keywords' content={ keywords }     />
+                    <meta name='author'   content={ creator }  />
+                    <meta name='creator'  content={ creator }  />
+                    <meta name='keywords' content={ keywords } />
 
                     <meta httpEquiv='content-type'     content='text/html; charset=UTF-8' />
                     <meta httpEquiv='content-language' content={ enUS }                   />
@@ -58,20 +58,21 @@ export default class MyDocument extends Document {
                     <meta property='og:image:width'      content='1366'          />
                     <meta property='og:image:height'     content='768'           />
 
-                    <meta property='article:author' content={ NyctibiusVII } />
+                    <meta property='article:author' content={ creator } />
 
-                    <meta name='twitter:title'        content={ title }                />
-                    <meta name='twitter:description'  content={ description }          />
-                    <meta name='twitter:card'         content='summary_large_image'    />
-                    <meta name='twitter:site'         content={ site }                 />
-                    <meta name='twitter:creator'      content={ NyctibiusVII_twitter } />
-                    <meta name='twitter:image'        content={ homeImg }              />
-                    <meta name='twitter:image:src'    content={ homeImg }              />
-                    <meta name='twitter:image:alt'    content='Thumbnail'              />
-                    <meta name='twitter:image:width'  content='1366'                   />
-                    <meta name='twitter:image:height' content='768'                    />
+                    <meta name='twitter:title'        content={ title }             />
+                    <meta name='twitter:description'  content={ description }       />
+                    <meta name='twitter:card'         content='summary_large_image' />
+                    <meta name='twitter:site'         content={ site }              />
+                    <meta name='twitter:creator'      content={ userTwitter }       />
+                    <meta name='twitter:image'        content={ homeImg }           />
+                    <meta name='twitter:image:src'    content={ homeImg }           />
+                    <meta name='twitter:image:alt'    content='Thumbnail'           />
+                    <meta name='twitter:image:width'  content='1366'                />
+                    <meta name='twitter:image:height' content='768'                 />
 
                     <link rel='shortcut icon' href='assets/favicon.svg' type='image/svg' />
+                    <link rel='canonical' href={ link } />
 
                     <link rel='preconnect' href='https://fonts.googleapis.com' />
                     <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />

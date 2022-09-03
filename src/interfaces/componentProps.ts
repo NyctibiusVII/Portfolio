@@ -67,3 +67,13 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
     children?: React.ReactNode
     styleBtn?: StyleButtonType
 }
+
+
+
+/**
+ * Defines the type of properties that the Most Used Technologies list will receive.
+ */
+export type TechnologiesType = {
+    fileName: string
+    width:    number
+}

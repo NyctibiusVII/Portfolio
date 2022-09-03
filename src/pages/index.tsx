@@ -2,8 +2,10 @@
 
 import type { NextPage } from 'next'
 
-import { Header } from '../components/Header'
-import { Footer } from '../components/Footer'
+import { Header }       from '../components/Header'
+import { Hero }         from '../components/Hero'
+import { Technologies } from '../components/Technologies'
+import { Footer }       from '../components/Footer'
 
 import Head from 'next/head'
 
@@ -18,19 +20,16 @@ const Home: NextPage = () => {
 
             <Header />
             <div className={styles.container}>
-                    <main className={styles.main}>
-                        <h1>HI, I&apos;m Matheus Vidigal</h1>
-                    </main>
+                <div id={styles.bg} />
 
-                    <section>
-                        <h2>Stack</h2>
-                    </section>
-                    <section>
-                        <h2>Projects</h2>
-                    </section>
-                    <section>
-                        <h2>Most Used Technologies</h2>
-                    </section>
+                <Hero />
+                <section id='stack' translate='no'>
+                    <h2>Stack</h2>
+                </section>
+                <section>
+                    <h2>Projects</h2>
+                </section>
+                <Technologies />
             </div>
             <Footer />
         </>

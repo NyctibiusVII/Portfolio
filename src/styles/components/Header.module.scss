@@ -59,10 +59,10 @@
 
 
 /* Mobile / Tablet */
-@media (max-width: 980px) { .container { padding: 0 var(--padding-mobile); } }
+@media screen and (max-width: 980px) { .container { padding: 0 var(--padding-mobile); } }
 
 /* Tablet / Desktop */
-@media (min-width: 780px) {
+@media screen and (min-width: 780px) {
     .container .content {
         max-width: var(--max-width-tablet);
 
@@ -118,7 +118,7 @@
 }
 
 /* Desktop */
-@media (min-width: 1480px) {
+@media screen and (min-width: 1480px) {
     .container .content {
         max-width: var(--max-width-desktop);
 

@@ -32,22 +32,30 @@
     --purple-200-transparency-50 : #7438f380;
 
     /* ~~~~~~~~~~~~~~~~~ Geral ~~~~~~~~~~~~~~~~~ */
-    --gradient-button   : linear-gradient(254.95deg, var(--pink-300) 0%, var(--purple-200) 100%);
-    --gradient-rights   : linear-gradient(270deg, var(--purple-200) 0%, var(--blue-400-transparency-30) 100%);
-    --gradient-contact  : linear-gradient(72.87deg, var(--pink-200-transparency-50) 0%, var(--purple-200-transparency-50) 100%);
+    --gradient-hero     : linear-gradient(90deg, var(--purple-200), var(--pink-200), var(--purple-200));
+    --gradient-rights   : linear-gradient(90deg, var(--purple-200), var(--blue-400-transparency-30), var(--purple-200));
+    --gradient-contact  : linear-gradient(70deg, var(--pink-200-transparency-50), var(--purple-200-transparency-50));
+    --gradient-button   : linear-gradient(70deg, var(--purple-200), var(--pink-300));
     --gradient-logo-1   : linear-gradient(270deg, var(--pink-200-transparency-80) 15.44%, var(--purple-200-transparency-50) 141.14%);
-    --gradient-logo-2   : linear-gradient(180deg, var(--purple-200) 10.02%, transparent 94.49%);
+    --gradient-logo-2   : linear-gradient(180deg, var(--purple-200) 10%, transparent);
+
     --transition-cb     : 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
     --luminosity-70p    : rgb(255 255 255 / 70%);
     --luminosity-50p    : rgb(255 255 255 / 50%);
     --luminosity-10p    : rgb(255 255 255 / 10%);
     --luminosity-5p     : rgb(255 255 255 / 5%);
     --shadow-5p         : rgb(0 0 0 / 5%);
     --shadow-1p         : rgb(0 0 0 / 1%);
+
     --padding-mobile    : 2rem;
     --max-width-mobile  : 35.2rem;
     --max-width-tablet  : 56rem;
     --max-width-desktop : 71rem;
+    --slideSpeedPartOne : 40s;
+    --slideSpeedPartTwo : 40s;
+    --slideSizePartOne  : 8.2rem;
+    --slideSizePartTwo  : 7.5rem;
 
     /* ~~~~~~~~~~~~~~~ JSON Code ~~~~~~~~~~~~~~~ */
     /* Colors ~ Dracula Theme */
@@ -112,14 +120,37 @@ html {
         background-color: var(--background);
         color: var(--text-plain);
 
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-
         &,
         input,
         button,
-        textarea { font: 400 1rem 'Urbanist', sans-serif; }
+        textarea {
+            font-size: 1rem;
+            font-weight: 400;
+            font-display: optional;
+            font-family:
+                'Urbanist',
+                'Inter',
+                -apple-system,
+                BlinkMacSystemFont,
+                'Segoe UI',
+                'Roboto',
+                'Oxygen',
+                'Ubuntu',
+                'Cantarell',
+                'Fira Sans',
+                'Droid Sans',
+                'Helvetica Neue',
+                sans-serif;
+            line-height: 1.65;
+
+            font-feature-settings: "kern";
+            -webkit-font-feature-settings: "kern";
+            -moz-font-feature-settings: "kern";
+
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
 
         a {
             color: inherit;
@@ -133,10 +164,19 @@ html {
                 text-decoration: 0.063rem dashed underline;
             }
         }
-        h1 { font: 700 2.625rem 'Poppins', sans-serif; }
+        h1 { font: 700 2rem 'Poppins', sans-serif; }
+        h2 { font: 700 1.5rem 'Urbanist', sans-serif; }
         li { list-style: none; }
         ol, ul { padding-left: 0; margin-top: 0; margin-bottom: 0; }
         button { outline: none; cursor: pointer; }
+
+
+
+        /* Desktop */
+        @media screen and (min-width: 1480px) {
+            h1 { font-size: 4.5rem; }
+            h2 { font-size: 3rem; }
+        }
     }
 
     ::selection {
