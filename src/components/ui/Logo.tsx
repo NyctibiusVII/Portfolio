@@ -19,7 +19,7 @@ export const Logo = ({ styleColor = '1' }: LogoProps) => {
                     height={68}
                 />
             </div>
-            <span className='username'>NyctibiusVII</span>
+            <span className='username' translate='no'>NyctibiusVII</span>
 
             <style jsx>{`
                 /* Mobile */
