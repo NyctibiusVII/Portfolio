@@ -3,6 +3,7 @@
 import type { NextPage } from 'next'
 
 import { Header }       from '../components/Header'
+import { Hero }         from '../components/Hero'
 import { Technologies } from '../components/Technologies'
 import { Footer }       from '../components/Footer'
 
@@ -23,13 +24,14 @@ const Home: NextPage = () => {
                         <h1>HI, I&apos;m Matheus Vidigal</h1>
                     </main>
 
-                    <section>
-                        <h2>Stack</h2>
-                    </section>
-                    <section>
-                        <h2>Projects</h2>
-                    </section>
-                    <Technologies />
+                <Hero />
+                <section id='stack' translate='no'>
+                    <h2>Stack</h2>
+                </section>
+                <section>
+                    <h2>Projects</h2>
+                </section>
+                <Technologies />
             </div>
             <Footer />
         </>
