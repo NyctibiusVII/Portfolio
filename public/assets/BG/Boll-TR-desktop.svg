@@ -1,16 +1,1 @@
-<svg width="1126" height="1126" viewBox="0 0 1126 1126" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Vector 1 ~ (Top / Right)" opacity="0.4" filter="url(#filter0_f_448_1509)">
-<path d="M563 1006C807.662 1006 1006 807.662 1006 563C1006 318.338 807.662 120 563 120C318.338 120 120 318.338 120 563C120 807.662 318.338 1006 563 1006Z" fill="url(#paint0_linear_448_1509)"/>
-</g>
-<defs>
-<filter id="filter0_f_448_1509" x="0" y="0" width="1126" height="1126" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="60" result="effect1_foregroundBlur_448_1509"/>
-</filter>
-<linearGradient id="paint0_linear_448_1509" x1="180.097" y1="642.195" x2="860.17" y2="472.131" gradientUnits="userSpaceOnUse">
-<stop offset="0.239583" stop-color="#FF008A"/>
-<stop offset="1" stop-color="#6100FF"/>
-</linearGradient>
-</defs>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1126" height="1126" fill="none" viewBox="0 0 1126 1126"><g id="Vector 1 ~ (Top / Right)" filter="url(#filter0_f_448_1509)" opacity=".4"><path fill="url(#paint0_linear_448_1509)" d="M563 1006C807.662 1006 1006 807.662 1006 563C1006 318.338 807.662 120 563 120C318.338 120 120 318.338 120 563C120 807.662 318.338 1006 563 1006Z"/></g><defs><filter id="filter0_f_448_1509" width="1126" height="1126" x="0" y="0" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" mode="normal" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_448_1509" stdDeviation="60"/></filter><linearGradient id="paint0_linear_448_1509" x1="180.097" x2="860.17" y1="642.195" y2="472.131" gradientUnits="userSpaceOnUse"><stop offset=".24" stop-color="#FF008A"/><stop offset="1" stop-color="#6100FF"/></linearGradient></defs></svg>
