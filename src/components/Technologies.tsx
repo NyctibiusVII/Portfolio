@@ -47,7 +47,7 @@ export const Technologies = () => {
     technologiesSecond = duplicatingTechnologies(technologiesSecond)
 
     return (
-        <section className={styles.container}>
+        <section className={`${styles.container} containerWidthLimitation`}>
             <h2>Most Used Technologies</h2>
 
             <div className={styles.slider}>

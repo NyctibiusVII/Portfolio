@@ -40,7 +40,7 @@ export const Hero = () => {
 
     return (
         <>
-            <main className={styles.container}>
+            <main className={`${styles.container} containerWidthLimitation`}>
                 <h1 id='typeWriter'><span>HI</span>, <br/>I&apos;m Matheus <br/>Vidigal</h1>
                 <p>Front End Web Developer</p>
 

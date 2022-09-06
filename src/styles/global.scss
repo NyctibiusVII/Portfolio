@@ -185,6 +185,15 @@ html {
     }
 }
 
+.containerWidthLimitation {
+    /* Mobile */
+    max-width: var(--max-width-mobile);
+    /* Tablet / Desktop */
+    @media screen and (min-width: 780px) { max-width: var(--max-width-tablet); }
+    /* Desktop */
+    @media screen and (min-width: 1480px) { max-width: var(--max-width-desktop); }
+}
+
 
 
 /* Scrollbar */

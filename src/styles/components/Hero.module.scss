@@ -1,6 +1,5 @@
 /* Mobile */
 .container {
-    max-width: var(--max-width-mobile);
     width: 100%;
 
     display: flex;
@@ -99,8 +98,6 @@
 /* Tablet / Desktop */
 @media screen and (min-width: 780px) {
     .container {
-        max-width: var(--max-width-tablet);
-
         margin-top: 2rem;
 
         .devStack {
@@ -274,8 +271,6 @@
 /* Desktop */
 @media screen and (min-width: 1480px) {
     .container {
-        max-width: var(--max-width-desktop);
-
         margin-top: 6.25rem;
 
         h1 {
