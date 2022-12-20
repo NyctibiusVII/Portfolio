@@ -15,8 +15,10 @@
 
     --blue-200  : #8393AF;
     --blue-400  : #1915CA;
-    --blue-700  : #10151e;
-    --blue-800  : #0C121C;
+    --blue-500  : #10151e;
+    --blue-600  : #0C121C;
+    --blue-700  : #080D16;
+    --blue-800  : #090E18;
     --blue-900  : #04070E;
     --blue-1000 : #030812;/* ~ 1° */
     --blue-400-transparency-30 : #1915CA4D;
@@ -30,6 +32,14 @@
 
     --purple-200 : #7438f3;/* ~ 1° */
     --purple-200-transparency-50 : #7438f380;
+
+    --gray-300 : #afafaf;
+
+    --red-300 : #F03148;
+
+    --yellow-300 : #EEE747;
+
+    --green-300 : #3CED8E;
 
     /* ~~~~~~~~~~~~~~~~~ Geral ~~~~~~~~~~~~~~~~~ */
     --gradient-hero     : linear-gradient(90deg, var(--purple-200), var(--pink-200), var(--purple-200));
@@ -45,6 +55,7 @@
     --luminosity-50p    : rgb(255 255 255 / 50%);
     --luminosity-10p    : rgb(255 255 255 / 10%);
     --luminosity-5p     : rgb(255 255 255 / 5%);
+    --shadow-10p        : rgb(0 0 0 / 10%);
     --shadow-5p         : rgb(0 0 0 / 5%);
     --shadow-1p         : rgb(0 0 0 / 1%);
 
@@ -84,7 +95,7 @@
     --scrollbar-thumb-bg       : var(--purple-200);
     --scrollbar-corner-bg      : transparent;
     /* Buttons -------------- */
-    --button-bg-normal         : var(--blue-800);
+    --button-bg-normal         : var(--blue-600);
     --button-bg-line           : transparent;
     --button-bg-gradient       : var(--gradient-button);
     --button-bg-options        : var(--luminosity-5p);
@@ -93,14 +104,26 @@
     /* Header --------------- */
     --box-shadow-header        : var(--blue-900-transparency-50);
     /* Popover -------------- */
-    --popover-search-bg        : var(--blue-700);
+    --popover-search-bg        : var(--blue-500);
     --popover-search-text      : var(--white);
-    --popover-menu-bg          : var(--blue-700);
+    --popover-menu-bg          : var(--blue-500);
     --popover-menu-text        : var(--luminosity-70p);
     --popover-menu-divider     : var(--luminosity-10p);
-    /* Mouse Selection ------ */
-    --selection-mouse-bg       : var(--luminosity-10p);
-    --selection-mouse-fg       : var(--pink-200);
+    /* Stack --------------- */
+    --stack-content-bg         : var(--blue-600);
+    --stack-content-border     : var(--purple-200);
+    --stack-black-bg           : var(--blue-500);
+    --stack-btn-active-bg      : var(--luminosity-5p);
+    --stack-btn-active-bd      : var(--luminosity-10p);
+    --stack-btn-active-bs      : var(--shadow-10p);
+    --stack-code-bg            : var(--blue-800);
+    --stack-code-fg            : var(--gray-300);
+    --stack-code-header-bg     : var(--blue-800);
+    --stack-code-header-bs     : var(--blue-700);
+    --stack-code-header-r-bg   : var(--red-300);
+    --stack-code-header-y-bg   : var(--yellow-300);
+    --stack-code-header-g-bg   : var(--green-300);
+    --stack-code-aside-bg      : var(--blue-700);
     /* Footer --------------- */
     --text-footer-info-fg      : var(--blue-200);
     --text-footer-rights-fg    : var(--gradient-rights);
@@ -109,6 +132,9 @@
     --text-404-stroke          : var(--luminosity-50p);
     --text-404-shadow-1        : var(--luminosity-50p);
     --text-404-shadow-2        : var(--luminosity-10p);
+    /* Mouse Selection ------ */
+    --selection-mouse-bg       : var(--luminosity-10p);
+    --selection-mouse-fg       : var(--pink-200);
 }
 
 

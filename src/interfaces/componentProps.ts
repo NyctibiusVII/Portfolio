@@ -71,6 +71,19 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 
 
 /**
+ * Defines the type of properties that the devLanguages ​​card list will receive.
+ */
+export type devLanguageType = {
+    title:       string
+    description: string
+    color:       string
+    imageSrc:    string
+    imageAlt:    string
+}
+
+
+
+/**
  * Defines the type of properties that the Most Used Technologies list will receive.
  */
 export type TechnologiesType = {

@@ -56,13 +56,13 @@
             background-color: var(--background);
             background-image: url(../../../public/assets/hero/PersonageHero.png), url(../../../public/assets/BG/Boll-TR.svg);
             background-blend-mode: luminosity, normal;
-            background-position: right 9rem top 5rem, left 50vw top -20rem;
+            background-position: right 9rem top 6rem, left 50vw top -18rem;
         }
     }
 }
 @media screen and (min-width: 960px) {
     .container #bg {
-        background-position: left calc(66vw - 10%) top 6rem, left 50vw top -19rem;
+        background-position: left calc(66vw - 10%) top 8rem, left 50vw top -16rem;
     }
 }
 
