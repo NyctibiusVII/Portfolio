@@ -1,6 +1,6 @@
 /* Import --------------------------------------------------------------- */
 
-import { ButtonProps } from '../../../../../interfaces/componentProps'
+import type { ButtonProps } from '../../../../../interfaces/componentProps'
 
 import styles from './index.module.scss'
 
@@ -39,7 +39,7 @@ export const BC_Line = ({ children, className, ...rest }: ButtonProps) =>
             @media (min-width: 780px) {
                 .inCard {
                     font-size: 0.7rem;
-                    
+
                     padding: 0.7rem;
                 }
             }

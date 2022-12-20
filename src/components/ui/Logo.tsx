@@ -1,6 +1,6 @@
 /* Import --------------------------------------------------------------- */
 
-import { LogoProps } from '../../interfaces/componentProps'
+import type { LogoProps } from '../../interfaces/componentProps'
 
 import Image  from 'next/image'
 

@@ -3,7 +3,7 @@
 import { Key, useEffect, useState } from 'react'
 
 import { usePreventDefault } from '../../../../hooks/usePreventDefault'
-import { SearchItensType }   from '../../../../interfaces/componentProps'
+import type { SearchItensType }   from '../../../../interfaces/componentProps'
 
 import { Button }  from '../../Button'
 import { Loading } from '../../Loading'

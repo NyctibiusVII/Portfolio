@@ -1,7 +1,8 @@
 /* Mobile */
 .container {
-    max-width: var(--max-width-mobile);
     width: 100%;
+
+    margin-top: 2rem;
 
     display: flex;
     flex-direction: column;
@@ -94,14 +95,12 @@
 
 
 /* Mobile / Tablet */
-@media screen and (min-width: 480px) { .container { margin-top: 1rem; } }
+@media screen and (min-width: 480px) { .container { margin-top: 3rem; } }
 
 /* Tablet / Desktop */
 @media screen and (min-width: 780px) {
     .container {
-        max-width: var(--max-width-tablet);
-
-        margin-top: 2rem;
+        margin-top: 4rem;
 
         .devStack {
             margin-top: 1rem;
@@ -137,7 +136,7 @@
 
             background-image: url(../../../public/assets/BG/Spring-1.png);
 
-            top: 2.5rem;
+            top: 3.5rem;
             right: 7vw;
 
             animation: toCircle 30s linear infinite;
@@ -208,7 +207,7 @@
 
             background-image: url(../../../public/assets/BG/Spring-2.png);
 
-            top: 18rem;
+            top: 19rem;
             right: 17vw;
 
             animation: toFloatHorizontally 10s ease-in-out infinite;
@@ -234,7 +233,7 @@
     }
 }
 @media screen and (min-width: 960px) {
-    .container { margin-top: 3rem; }
+    .container { margin-top: 5rem; }
 
     #bg {
         #card {
@@ -243,7 +242,7 @@
 
             background-image: url(../../../public/assets/BG/Card.png);
 
-            top: 8rem;
+            top: 10rem;
             left: calc(50vw - 2.5rem);
 
             animation: toFloatDiagonally 8s ease-in-out infinite;
@@ -266,16 +265,14 @@
                 }
             }
         }
-        #spring_1 { top: 3.5rem; left: calc(50vw + 18rem); }
-        #spring_2 { top: 19rem;  left: calc(50vw + 16rem); }
+        #spring_1 { top: 5.5rem; left: calc(50vw + 18rem); }
+        #spring_2 { top: 21rem;  left: calc(50vw + 16rem); }
     }
 }
 
 /* Desktop */
 @media screen and (min-width: 1480px) {
     .container {
-        max-width: var(--max-width-desktop);
-
         margin-top: 6.25rem;
 
         h1 {
