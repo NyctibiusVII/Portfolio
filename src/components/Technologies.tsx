@@ -2,7 +2,7 @@
 
 import { Key } from 'react'
 
-import { TechnologiesType } from '../interfaces/componentProps'
+import type { TechnologiesType } from '../interfaces/componentProps'
 
 import Image  from 'next/image'
 

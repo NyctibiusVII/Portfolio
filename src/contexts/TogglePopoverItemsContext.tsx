@@ -6,7 +6,7 @@ import {
     createContext
 } from 'react'
 
-import { PopoverItemsTypes } from '../interfaces/componentProps'
+import type { PopoverItemsTypes } from '../interfaces/componentProps'
 
 /* ---------------------------------------------------------------------- */
 

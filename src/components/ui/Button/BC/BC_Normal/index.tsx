@@ -1,6 +1,6 @@
 /* Import --------------------------------------------------------------- */
 
-import { ButtonProps } from '../../../../../interfaces/componentProps'
+import type { ButtonProps } from '../../../../../interfaces/componentProps'
 
 import styles from './index.module.scss'
 

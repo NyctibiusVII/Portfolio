@@ -2,7 +2,7 @@
 
 import ReactLoading from 'react-loading'
 
-import { LoadingProps } from '../../../interfaces/componentProps'
+import type { LoadingProps } from '../../../interfaces/componentProps'
 
 /* ---------------------------------------------------------------------- */
 

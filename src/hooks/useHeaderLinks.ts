@@ -1,4 +1,4 @@
-import { MenuItensType } from '../interfaces/componentProps'
+import type { MenuItensType } from '../interfaces/componentProps'
 
 export const useHeaderLinks: Array<MenuItensType> = [
     { href: '/',                                  content: 'Home'    },

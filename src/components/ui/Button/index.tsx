@@ -9,7 +9,7 @@ import {
     BC_DevLanguages
 } from './BC'
 
-import { ButtonProps } from '../../../interfaces/componentProps'
+import type { ButtonProps } from '../../../interfaces/componentProps'
 
 /* ---------------------------------------------------------------------- */
 
