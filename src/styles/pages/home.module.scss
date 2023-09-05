@@ -50,7 +50,7 @@
 /* Tablet / Desktop */
 @media screen and (min-width: 780px) {
     .container {
-        gap: 8rem;
+        gap: 13rem;
 
         #bg {
             background-color: var(--background);
@@ -68,13 +68,9 @@
 
 /* Desktop */
 @media screen and (min-width: 1480px) {
-    .container {
-        gap: 12rem;
-
-        #bg {
-            background-image: url(../../../public/assets/hero/PersonageHero-desktop.png), url(../../../public/assets/BG/Boll-TR-desktop.svg);
-            background-blend-mode: luminosity, normal;
-            background-position: left calc(60vw - 10%) top 8rem, left 50vw top -25rem;
-        }
+    .container #bg {
+        background-image: url(../../../public/assets/hero/PersonageHero-desktop.png), url(../../../public/assets/BG/Boll-TR-desktop.svg);
+        background-blend-mode: luminosity, normal;
+        background-position: left calc(60vw - 10%) top 8rem, left 50vw top -25rem;
     }
 }

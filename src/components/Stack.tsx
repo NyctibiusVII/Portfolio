@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-import type { devLanguageType } from '../interfaces/componentProps'
+import type { DevLanguageType } from '../interfaces/componentProps'
 
 import { Button } from './ui/Button'
 
@@ -31,7 +31,7 @@ export const Stack = () => {
         return <>...</>
     }`
     const codeLines = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
-    const devLanguages: Array<devLanguageType> = [
+    const devLanguages: Array<DevLanguageType> = [
         {
             title: 'NextJS',
             description: 'SSR and SSG, image optimization, code splitting, SEO, performance and processing.',
@@ -97,8 +97,8 @@ export const Stack = () => {
         }
     ]
 
-    const [devLanguage, setDevLanguage] = useState<devLanguageType>(devLanguages[0])
-    const [devColorLanguage, setColorDevLanguage] = useState<devLanguageType['color']>('#fff')
+    const [devLanguage, setDevLanguage] = useState<DevLanguageType>(devLanguages[0])
+    const [devColorLanguage, setColorDevLanguage] = useState<DevLanguageType['color']>('#fff')
     const [devButtonActive, setDevButtonActive] = useState(0)
 
     const handleDevLanguage = (index: number, hex: string) => {
