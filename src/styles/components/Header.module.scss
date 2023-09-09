@@ -81,7 +81,7 @@
 
                 li {
                     a {
-                        font-size: 0.8rem;
+                        font-size: 0.9rem;
 
                         &.active { text-decoration: underline; }
                     }
@@ -98,7 +98,7 @@
                             border: 0.063rem solid transparent;
                             text-decoration: none;
 
-                            padding: 0.7rem 1.26rem;
+                            padding: 0.4rem 1rem;
 
                             &:focus { color: var(--white); border-color: var(--white); }
                         }

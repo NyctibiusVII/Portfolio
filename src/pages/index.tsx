@@ -27,7 +27,7 @@ interface HomeProps {
 const Home = ({ projectsProps }: HomeProps) => {
     return (
         <>
-            <Head><title>Portfolio | Home</title></Head>
+            <Head><title>Portfolio - Matheus V.</title></Head>
 
             <Header />
             <div className={styles.container}>
@@ -59,15 +59,28 @@ export const getStaticProps: GetStaticProps = async () => {
         homepage:         string
     }
 
-    const projectsToShow = [
-        'BoletimEscolar',
-        'DashGo',
-        'Dev.Finances',
-        'Happy',
-        'Letmeask',
-        'MoveIt',
-        'Podcastr',
-        'Proffy'
+    // const projectsToShow = [
+    //     'BoletimEscolar',
+    //     'DashGo',
+    //     'Dev.Finances',
+    //     'Happy',
+    //     'Letmeask',
+    //     'MoveIt',
+    //     'Podcastr',
+    //     'Proffy'
+    // ]
+
+    const projectsToHide = [
+        '4AMIGOS-app',
+        'CursoJS-DevAprender',
+        'eSports',
+        'github-readme-stats',
+        'InstaCloneHome',
+        'JobsCalc',
+        'NetflixInterface',
+        'NyctibiusVII',
+        'nyctibiusvii-theme',
+        'Portfolio',
     ]
 
     const projects = await data.then(res => res.data.map(async (project: GithubProjectDataTypes) => {
@@ -111,7 +124,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
     const allProjects = await Promise.all(projects)
 
-    const projectsProps = allProjects.filter(project => projectsToShow.includes(project.name))
+    const projectsProps = allProjects.filter(project => !projectsToHide.includes(project.name))
 
     return { props: {  projectsProps }, revalidate: 60 * 60 * 24 /* 1 dia */ }
 }
