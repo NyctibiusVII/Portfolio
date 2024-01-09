@@ -81,6 +81,7 @@ export const getStaticProps: GetStaticProps = async () => {
         'NyctibiusVII',
         'nyctibiusvii-theme',
         'Portfolio',
+        'express-api-starter-ts',
     ]
 
     const projects = await data.then(res => res.data.map(async (project: GithubProjectDataTypes) => {

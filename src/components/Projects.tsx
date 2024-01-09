@@ -75,16 +75,18 @@ export const Projects = ({ cardsProps }: ProjectsProps) => {
             <header>
                 <h2>Projects</h2>
 
-                <Button styleBtn='gradient' title='Go to Explore page' onClick={() => Router.push('/explore')}>
-                    <Image
-                        src={`/assets/projects/rocket.svg`}
-                        alt='Rocket icon'
-                        width={24}
-                        height={24}
-                        loading='lazy'
-                    />
-                    &nbsp;Explore All
-                </Button>
+                {
+                    /*<Button styleBtn='gradient' title='Go to Explore page' onClick={() => Router.push('/explore')}>
+                        <Image
+                            src={`/assets/projects/rocket.svg`}
+                            alt='Rocket icon'
+                            width={24}
+                            height={24}
+                            loading='lazy'
+                        />
+                        &nbsp;Explore All
+                    </Button>*/
+                }
             </header>
 
             <Carousel
