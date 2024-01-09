@@ -53,6 +53,7 @@
 
     --luminosity-70p    : rgb(255 255 255 / 70%);
     --luminosity-50p    : rgb(255 255 255 / 50%);
+    --luminosity-20p    : rgb(255 255 255 / 20%);
     --luminosity-10p    : rgb(255 255 255 / 10%);
     --luminosity-5p     : rgb(255 255 255 / 5%);
     --shadow-10p        : rgb(0 0 0 / 10%);
@@ -124,6 +125,13 @@
     --stack-code-header-y-bg   : var(--yellow-300);
     --stack-code-header-g-bg   : var(--green-300);
     --stack-code-aside-bg      : var(--blue-700);
+    /* Card --------------- */
+    --card-bg                  : #38264633;
+    --card-picture-bg          : #F2B4B0;
+    --card-picture-repo-bd     : var(--luminosity-50p);
+    --card-p-fg                : var(--blue-200);
+    --card-span-fg             : var(--white);
+    --card-boll-repo-bd        : var(--luminosity-20p);
     /* Footer --------------- */
     --text-footer-info-fg      : var(--blue-200);
     --text-footer-rights-fg    : var(--gradient-rights);
@@ -144,6 +152,9 @@ html {
 
     body {
         background-color: var(--background);
+        background-image: url(../../public/assets/BG/Boll-TR.svg);
+        background-repeat: no-repeat;
+        background-position: right 50vw bottom 35rem;
         color: var(--text-plain);
 
         &,

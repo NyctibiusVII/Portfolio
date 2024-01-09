@@ -73,12 +73,31 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 /**
  * Defines the type of properties that the devLanguages ​​card list will receive.
  */
-export type devLanguageType = {
+export type DevLanguageType = {
     title:       string
     description: string
     color:       string
     imageSrc:    string
     imageAlt:    string
+}
+
+
+
+/**
+ * Defines the type of properties that the projects Card will receive.
+ */
+export type ProjectDataType = {
+    name:     string
+    updated:  string
+    starred:  string
+    language: string
+    color:    string
+    image:    string
+    github:   string
+    online:   string
+}
+export type ProjectsProps = {
+    cardsProps: Array<ProjectDataType>
 }
 
 
